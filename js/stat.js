@@ -223,9 +223,9 @@ function congCPU(id) {
 
 /* điểm tối đa = 340 */
 function max340(element) {
-  if (element.innerHTML > 340) {
-    let tempt = element.innerHTML - 340;
-    element.innerHTML = 340 + " (+" + tempt + ")";
+  if (element.innerHTML > 352) {
+    let tempt = element.innerHTML - 352;
+    element.innerHTML = 352 + " (+" + tempt + ")";
   }
 }
 /* khóa và mở nút - */
