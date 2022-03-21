@@ -108,7 +108,7 @@ function changeListener() {
       cpu_fuel = CPU.SC.fuel;
       cpu_def = CPU.SC.def;
       cpu_spirit = CPU.SC.spirit;
-      cpu_eva = CPU.ASCd.eva;
+      cpu_eva = CPU.SC.eva;
       cpu_shield = CPU.SC.shield;
       break;
     case "-":
