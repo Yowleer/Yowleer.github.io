@@ -221,7 +221,7 @@ function congCPU(id) {
  
 }
 
-/* điểm tối đa = 340 */
+/* điểm tối đa = 352 */
 function max340(element) {
   if (element.innerHTML > 352) {
     let tempt = element.innerHTML - 352;
