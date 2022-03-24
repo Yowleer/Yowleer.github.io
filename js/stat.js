@@ -90,7 +90,7 @@ const CPU = {
     shield: 46,
     eva: 0,
   },
-  SC: {
+  Sc: {
     atk: 21,
     def: 0,
     fuel: 26,
@@ -107,6 +107,59 @@ const CPU = {
     eva: 0,
   },
 }
+
+/* Bảng enchant CPU */
+const ENT = {
+  Ad: {
+    atk: 0,
+    def: 0,
+    fuel: 0,
+    spirit: 0,
+    shield: 0,
+    eva: 0,
+  },
+  Vi: {
+    atk: 0,
+    def: 0,
+    fuel: 0,
+    spirit: 0,
+    shield: 0,
+    eva: 0,
+  },
+  Fo: {
+    atk: 0,
+    def: 0,
+    fuel: 0,
+    spirit: 0,
+    shield: 0,
+    eva: 0,
+  },
+  Mo: {
+    atk: 0,
+    def: 0,
+    fuel: 0,
+    spirit: 0,
+    shield: 0,
+    eva: 0,
+  },
+  Sc: {
+    atk: 0,
+    def: 0,
+    fuel: 0,
+    spirit: 0,
+    shield: 0,
+    eva: 0,
+  },
+  nothing:{
+    atk: 1,
+    def: 0,
+    fuel: 0,
+    spirit: 0,
+    shield: 0,
+    eva: 0,
+  },
+}
+
 /* Hàm chỉnh cpu_stat *
 function changeListener() {
   var value = document.getElementById("cpuSel").value;
@@ -152,7 +205,7 @@ function changeListener() {
       cpu_fuel = CPU.SC.fuel;
       cpu_def = CPU.SC.def;
       cpu_spirit = CPU.SC.spirit;
-      cpu_eva = CPU.SC.eva;
+      cpu_eva = CPU.ASCd.eva;
       cpu_shield = CPU.SC.shield;
       break;
     case "-":
@@ -303,7 +356,7 @@ export {
   btn_minus,
   btn_plus_minus_aio,
   update_remain,
-  CPU,
+  CPU,ENT,
   congCPU,
   
 }

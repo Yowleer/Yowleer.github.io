@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DreamACE.VN StatCalc</title>
     <link rel="stylesheet" href="./css/index.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
 </head>
 <body>
@@ -19,7 +21,7 @@
     </header>
 <div class="container">
 
-    <h1>DreamACE.VN</h1>
+    <h1 title="Game KHÔNG Chiến Số 1 Việt Nam">DreamACE.VN</h1>
     <h2>Bảng set điểm</h2>
 
     <div class="head"> <!--4 gear, điểm, CPU, điểm dư-->
@@ -39,12 +41,12 @@
             <div class="ears">
                 <div class="label">CPU</div>
                 <select id="cpuSel">
-                    <option value="-">-</option>
+                    <option value="nothing">-</option>
                     <option value="Ad">Adagio Final</option>
                     <option value="Vi">Vivace Final</option>
                     <option value="Fo">Fortissimo Final</option>
                     <option value="Mo">Moderato Final</option>
-                    <option value="SC">SC-Dolce Final</option>
+                    <option value="Sc">SC-Dolce Final</option>
                 </select>
             </div>
         </div>
@@ -52,6 +54,7 @@
         <div>
             <span>Số điểm còn lại:</span>
             <span id="remain">144</span>
+            <span style="float: right; margin-right: 400px;font-size: 1.4rem;color:red;" id="warning"></span>
         </div>
        
     </div> 
@@ -60,6 +63,18 @@
         <div class="arms">
             <label class="label" for="atk">Tấn công (<span class="base-stat" id="gear-atk">4</span>) </label>
             <span id="atk">4</span>
+            <span style="margin-right:0">
+                <span style="color:orange"> (+</span>
+                <select title="Enchant CPU" class="ent" id="ent-atk">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <span style="color:orange">)</span>
+                </span>
             <div class="btns">
                 <input type="text" value="0" id="amount__atk" style="width:3rem;text-align:center">
                 <button style="padding-top:1px;" id="btn_plus_atk">+</button>
@@ -69,6 +84,18 @@
         <div class="arms">
             <label class="label" for="fuel">Nhiên liệu (<span class="base-stat" id="gear-fuel">3</span>) </label>
             <span id="fuel">3</span>
+            <span style="margin-right:0">
+                <span style="color:orange"> (+</span>
+                <select title="Enchant CPU" class="ent" id="ent-fuel">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <span style="color:orange">)</span>
+                </span>
             <div class="btns">
                 <input type="text" value="0" id="amount__fuel" style="width:3rem;text-align:center">
                 <button style="padding-top:1px;" id="btn_plus_fuel">+</button>
@@ -78,6 +105,18 @@
         <div class="arms">
             <label class="label" for="def">Phòng ngự (<span class="base-stat" id="gear-def">3</span>) </label>
             <span id="def">3</span>
+            <span style="margin-right:0">
+                <span style="color:orange"> (+</span>
+                <select title="Enchant CPU" class="ent" id="ent-def">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <span style="color:orange">)</span>
+                </span>
             <div class="btns">
                 <input type="text" value="0" id="amount__def" style="width:3rem;text-align:center">
                 <button style="padding-top:1px;" id="btn_plus_def">+</button>
@@ -87,6 +126,18 @@
         <div class="arms">
             <label class="label" for="spirit">Kỹ năng (<span class="base-stat" id="gear-spirit">3</span>) </label>
             <span id="spirit">3</span>
+            <span style="margin-right:0">
+                <span style="color:orange"> (+</span>
+                <select title="Enchant CPU" class="ent" id="ent-spirit">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <span style="color:orange">)</span>
+                </span>
             <div class="btns">
                 <input type="text" value="0" id="amount__spirit" style="width:3rem;text-align:center">
                 <button style="padding-top:1px;" id="btn_plus_spirit">+</button>
@@ -96,6 +147,18 @@
         <div class="arms">
             <label class="label" for="eva">Né tránh (<span class="base-stat" id="gear-eva">1</span>) </label>
             <span id="eva">1</span>
+            <span style="margin-right:0">
+                <span style="color:orange"> (+</span>
+                <select title="Enchant CPU" class="ent" id="ent-eva">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <span style="color:orange">)</span>
+                </span>
             <div class="btns">
                 <input type="text" value="0" id="amount__eva" style="width:3rem;text-align:center">
                 <button style="padding-top:1px;" id="btn_plus_eva">+</button>
@@ -105,6 +168,18 @@
         <div class="arms">
             <label class="label" for="shield">Giáp (<span class="base-stat" id="gear-shield">4</span>) </label>
             <span id="shield">4</span>
+            <span style="margin-right:0">
+                <span style="color:orange"> (+</span>
+                <select title="Enchant CPU" class="ent" id="ent-shield">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <span style="color:orange">)</span>
+                </span>
             <div class="btns">
                 <input type="text" value="0" id="amount__shield" style="width:3rem;text-align:center">
                 <button style="padding-top:1px;" id="btn_plus_shield">+</button>

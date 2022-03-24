@@ -131,6 +131,14 @@ li.active:hover {
     font-size:1.4rem;
     padding:3px 0 0 0;
 }
+.body .arms .ent {
+    height:32px; width:48px;
+    font-size:1.4rem;
+    padding:0;
+    color: orange;
+    border: 1px solid orange;
+    text-align: center;
+}
 
 /* TOES */
 /* .legs */
