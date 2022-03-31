@@ -252,7 +252,7 @@ document.querySelectorAll('.ent').forEach(item => {
 /* PLUS & MINUS __ ATK */
 var amount_atk = document.getElementById("amount__atk");  // Lấy số lượng điểm
 var Tan_cong = document.getElementById("atk");  // Lấy Tấn công
-amount_atk.addEventListener("change", function() {
+amount_atk.onchange = amount_atk.onkeyup = function() {
     Tan_cong.innerHTML = amount_atk.value * base_atk + base_atk + cpu_atk + ent_atk;  // tính Tấn công
     update_remain();  // Cập nhật điểm còn lại
     max340(Tan_cong);
@@ -261,13 +261,13 @@ amount_atk.addEventListener("change", function() {
     document.getElementById("card_pierce").innerHTML = pierce_array[card_atk].toFixed(2) + "%";  // update %pierce ở card-content
     document.getElementById("card_prob").innerHTML = probability_array[card_atk].toFixed(2) + "%";  // update %prob ở card-content
     btn_plus_minus(amount_atk, "btn_minus_atk");  // Khóa và mở nút - khi nhập input
-  })
+  }
  
 btn_plus_minus_aio(amount_atk,"btn_plus_atk","btn_minus_atk");  // Nút + ATK và - ATK
 /* PLUS & MINUS __ FUEL */
 var amount_fuel = document.getElementById("amount__fuel");  // Lấy số lượng điểm
 var Nhien_lieu = document.getElementById("fuel");  // Lấy Nhiên liệu
-amount_fuel.addEventListener("change", function() {
+amount_fuel.onchange = amount_fuel.onkeyup = function() {
   Nhien_lieu.innerHTML = amount_fuel.value * base_fuel + base_fuel + cpu_fuel + ent_fuel;  // tính Nhiên liệu
   update_remain();  // Cập nhật điểm còn lại
     max340(Nhien_lieu);
@@ -275,55 +275,55 @@ amount_fuel.addEventListener("change", function() {
     document.getElementById("card_fuel").innerHTML = fuel(card_fuel);  // update nhiên liệu ở card-content
     document.getElementById("card_weight").innerHTML = capacity(card_fuel);  // update tải trọng ở card-content
     btn_plus_minus(amount_fuel, "btn_minus_fuel");  // Khóa và mở nút - khi nhập input
-  })
+  }
 btn_plus_minus_aio(amount_fuel,"btn_plus_fuel","btn_minus_fuel");  // Nút + FUEL và - FUEL
 /* PLUS & MINUS __ DEF */
 var amount_def = document.getElementById("amount__def");  // Lấy số lượng điểm
 var Phong_ngu = document.getElementById("def");  // Lấy Phòng ngự
-amount_def.addEventListener("change", function() {
+amount_def.onchange = amount_def.onkeyup = function() {
   Phong_ngu.innerHTML = amount_def.value * base_def + base_def + cpu_def + ent_def;  // tính Phòng ngự
   update_remain();  // Cập nhật điểm còn lại
     max340(Phong_ngu);
     var card_def = parseInt(Phong_ngu.innerHTML, 10);  // lấy số dưới Phòng ngự
     document.getElementById("card_def").innerHTML = defense_array[card_def].toFixed(2) + "%";  // update phòng ngự ở card-content
     btn_plus_minus(amount_def, "btn_minus_def");  // Khóa và mở nút - khi nhập input
-  })
+  }
 btn_plus_minus_aio(amount_def,"btn_plus_def","btn_minus_def");  // Nút + DEF và - DEF
 /* PLUS & MINUS __ SPIRIT */
 var amount_spirit = document.getElementById("amount__spirit");  // Lấy số lượng điểm
 var Ky_nang = document.getElementById("spirit");  // Lấy Kỹ năng
-amount_spirit.addEventListener("change", function() {
+amount_spirit.onchange = amount_spirit.onkeyup = function() {
   Ky_nang.innerHTML = amount_spirit.value * base_spirit + base_spirit + cpu_spirit + ent_spirit;  // tính Kỹ năng
   update_remain();  // Cập nhật điểm còn lại
     max340(Ky_nang);
     var card_spirit = parseInt(Ky_nang.innerHTML, 10);  // lấy số dưới Kỹ năng
     document.getElementById("card_spirit").innerHTML = skillpoints(card_spirit);  // update kỹ năng ở card-content
     btn_plus_minus(amount_spirit, "btn_minus_spirit");  // Khóa và mở nút - khi nhập input
-  })
+  }
 btn_plus_minus_aio(amount_spirit,"btn_plus_spirit","btn_minus_spirit");  // Nút + SPIRIT và - SPIRIT
 /* PLUS & MINUS __ EVA */
 var amount_eva = document.getElementById("amount__eva");  // Lấy số lượng điểm
 var Ne_tranh = document.getElementById("eva");  // Lấy Né tránh
-amount_eva.addEventListener("change", function() {
+amount_eva.onchange = amount_eva.onkeyup = function() {
   Ne_tranh.innerHTML = amount_eva.value * base_eva + base_eva + cpu_eva + ent_eva;  // tính Né tránh
   update_remain();  // Cập nhật điểm còn lại
     max340(Ne_tranh);
     var card_eva = parseInt(Ne_tranh.innerHTML, 10);  // lấy số dưới Né tránh
     document.getElementById("card_eva").innerHTML = evasion_array[card_eva].toFixed(2) + "%";  // update né tránh ở card-content
     btn_plus_minus(amount_eva, "btn_minus_eva");  // Khóa và mở nút - khi nhập input
-  })
+  }
 btn_plus_minus_aio(amount_eva,"btn_plus_eva","btn_minus_eva");  // Nút + EVA và - EVA
 /* PLUS & MINUS __ SHIELD */
 var amount_shield = document.getElementById("amount__shield");
 var Giap = document.getElementById("shield");  // Lấy Giap
-amount_shield.addEventListener("change", function() {
+amount_shield.onchange = amount_shield.onkeyup = function() {
   Giap.innerHTML = amount_shield.value * base_shield + base_shield + cpu_shield + ent_shield;  // tính Giáp
   update_remain();  // Cập nhật điểm còn lại
     max340(Giap);
     var card_shield = parseInt(Giap.innerHTML, 10);  // lấy số dưới Giáp
     document.getElementById("card_shield").innerHTML = shield_array[card_shield];  // update giáp ở card-content
     btn_plus_minus(amount_shield, "btn_minus_shield");  // Khóa và mở nút - khi nhập input
-  })
+  }
 btn_plus_minus_aio(amount_shield,"btn_plus_shield","btn_minus_shield")  // Nút + SHIELD và - SHIELD
 
 
