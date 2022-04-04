@@ -13,12 +13,14 @@
 </head>
 <body>
 
-    <header role="banner" style="background-color: rgba(129, 236, 236,1);height:5rem">
-        <nav>
-            <div class="container" style="color:white">
-                DEMO
-            </div>
-        </nav>
+    <header role="banner" class="banner">
+        <div class="container of-header" style="color:white">
+            <ul style="margin-left:-16px;">
+                <li><a href="https://dreamace.vn/" class="brand" title="Trang chủ DreamACE.VN">DAvN</a>
+                <li><a href="/index.html" class="menuItem is-selected">BẢNG SET ĐIỂM</a></li>
+                <li><a href="/weapon.html" class="menuItem">BẢNG CHƠI ĐỒ</a></li>
+            </ul>
+        </div>
     </header>
 <div class="container">
 
@@ -237,8 +239,10 @@
             </div>
         </div>
     </div>
+
     <hr style="border: 0.5px solid #c8d6e5;background-color:#c8d6e5"/>
-</div>   
+</div>
+
 <footer role="contentinfo" class="footer">
     <div class="container">
         <span>Made with help from good people</span>
@@ -247,6 +251,18 @@
     </div>
 </footer>
 <p id="demo" type="text">DEMO</p>
+
+<script type="text/javascript">     /*is-select cho html hiện tại*/
+    const currentLocation = location.href;
+    const menuItem = document.querySelectorAll('.menuItem');
+    const menuLength = menuItem.length;
+    for (let i = 0; i < menuLength; i++) {
+        if (menuItem[i].href === currentLocation) {
+            menuItem[i].className += " is-selected"
+        }
+        else menuItem[i].className -= " is-selected"
+    }
+</script>
 
 <script type="module" src="./js/stat.js"></script>
 <script type="module" src="./js/values.js"></script>
