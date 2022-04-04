@@ -5,13 +5,41 @@ html {
     background-size:15%;
 
 }
+.banner {
+    background-color: dodgerblue;
+}
 .container {
    max-width:1100px;
    width:1100px;
    margin:auto; 
 }
+.container.of-header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+}
+.container.of-header li {
+    float:left;
+}
+.container.of-header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+    padding: 16px;
+    text-decoration: none;
+}
+.container.of-header li a:hover {
+    background-color: deepskyblue;
+    /*rgb(62, 146, 146);*/
+}
+.container.of-header .is-selected {
+    background-color:deepskyblue;
+}
 h1 {
-    color:hotpink;
+    color:deeppink;
 }
 h2 {
     color:dodgerblue;
@@ -38,14 +66,9 @@ h2 {
     text-align:center;
     line-height: 2.3rem;
     font-weight:500;
-    border: 1px solid orangered;
+    border: 1px solid lightgrey;
     margin:-1px 0 0 -1px;
     font-size:1.4rem;
-}
-.active {
-    background-color:royalblue;
-    font-weight:800;
-    color:white;
 }
 .eyes li:hover {
     background-color: rgba(182, 182, 182, 0.1);
@@ -53,9 +76,18 @@ h2 {
     color:black;
 }
 li.active:hover {
-    background-color:royalblue;
+    background-color:deepskyblue;
     
     color:white;
+}
+.gearSel.active {
+    background-color:deepskyblue;
+    font-weight:800;
+    color:white;
+    border-color:deepskyblue;
+}
+.eyes .gearSel {
+    padding-bottom: 2px;
 }
 /* .lower-face */
 .lower-face {
@@ -162,13 +194,18 @@ li.active:hover {
     padding:12px;
     font-weight: 700;
     font-size: 1.4rem;
-    background-color:rgba(129, 236, 236,0.5);
+    background-color:aliceblue;
 }
 .card .card-content {
     padding:0 24px 24px 24px;
     
 }
 
+hr {
+    display: block;
+    height: 2px;
+    margin: 1.5rem 0;
+}
 /* *** */
 .footer {
     background-color:#f5f5f5;
