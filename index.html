@@ -16,256 +16,32 @@
     <header role="banner" class="banner">
         <div class="container of-header" style="color:white">
             <ul style="margin-left:-16px;">
-                <li><a href="https://dreamace.vn/" class="brand" title="Trang chủ DreamACE.VN">DAvN</a>
-                <li><a href="/index.html" class="menuItem is-selected">BẢNG SET ĐIỂM</a></li>
+                <li><a href="/index.html" class="brand is-selected" style="background-color:deepskyblue;">DAvN</a>
+                <li><a href="/stat.html" class="menuItem">BẢNG SET ĐIỂM</a></li>
                 <li><a href="/weapon.html" class="menuItem">BẢNG CHƠI ĐỒ</a></li>
             </ul>
         </div>
     </header>
 <div class="container">
-
-    <h1 title="Game KHÔNG Chiến Số 1 Việt Nam">DreamACE.VN</h1>
-    <h2>Bảng set điểm</h2>
-
-    <div class="head"> <!--4 gear, điểm, CPU, điểm dư-->
-        <div class="eyes" id="selGear">
-           <ul>
-               <li class="gearSel">I-Gear</li>
-               <li class="gearSel">M-Gear</li>
-               <li class="gearSel">B-Gear</li>
-               <li class="gearSel active">A-Gear</li>
-           </ul>
+    <h1>For Dreamers</h1>
+    <div class="columns">
+        <div class="column">
+            <a href="/stat.html">
+                <div class="bang">            
+                    <div>BẢNG SET ĐIỂM</div>
+                    <div style="font-size: 1.5rem">Build CPU Enchant 5 và 352 điểm</div>
+                </div> 
+            </a>
         </div>
-        <div class="lower-face">
-            <div class="nose">
-                <div class="label">Tổng điểm</div>
-                <input type="number" value="144" id="totalstat">
-            </div>
-            <div class="ears">
-                <div class="label">CPU</div>
-                <select id="cpuSel">
-                    <option value="nothing">-</option>
-                    <option value="Ad">Adagio Final</option>
-                    <option value="Vi">Vivace Final</option>
-                    <option value="Fo">Fortissimo Final</option>
-                    <option value="Mo">Moderato Final</option>
-                    <option value="Sc">SC-Dolce Final</option>
-                </select>
-            </div>
-        </div>
-        
-        <div>
-            <span>Số điểm còn lại:</span>
-            <span id="remain">144</span>
-            <span style="float: right; margin-right: 400px;font-size: 1.4rem;color:red;" id="warning"></span>
-        </div>
-       
-    </div> 
-<br>    
-    <div class="body"> <!--Bảng điểm-->
-        <div class="arms">
-            <label class="label" for="atk">Tấn công (<span class="base-stat" id="gear-atk">4</span>) </label>
-            <span id="atk">4</span>
-            <span style="margin-right:0">
-                <span style="color:orange"> (+</span>
-                <select title="Enchant CPU" class="ent" id="ent-atk">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <span style="color:orange">)</span>
-                </span>
-            <div class="btns">
-                <input type="text" value="0" id="amount__atk" style="width:3rem;text-align:center">
-                <button style="padding-top:1px;" id="btn_plus_atk">+</button>
-                <button disabled id="btn_minus_atk">-</button>
-            </div>
-        </div>
-        <div class="arms">
-            <label class="label" for="fuel">Nhiên liệu (<span class="base-stat" id="gear-fuel">3</span>) </label>
-            <span id="fuel">3</span>
-            <span style="margin-right:0">
-                <span style="color:orange"> (+</span>
-                <select title="Enchant CPU" class="ent" id="ent-fuel">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <span style="color:orange">)</span>
-                </span>
-            <div class="btns">
-                <input type="text" value="0" id="amount__fuel" style="width:3rem;text-align:center">
-                <button style="padding-top:1px;" id="btn_plus_fuel">+</button>
-                <button disabled id="btn_minus_fuel">-</button>
-            </div>
-        </div>
-        <div class="arms">
-            <label class="label" for="def">Phòng ngự (<span class="base-stat" id="gear-def">3</span>) </label>
-            <span id="def">3</span>
-            <span style="margin-right:0">
-                <span style="color:orange"> (+</span>
-                <select title="Enchant CPU" class="ent" id="ent-def">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <span style="color:orange">)</span>
-                </span>
-            <div class="btns">
-                <input type="text" value="0" id="amount__def" style="width:3rem;text-align:center">
-                <button style="padding-top:1px;" id="btn_plus_def">+</button>
-                <button disabled id="btn_minus_def">-</button>
-            </div>
-        </div>
-        <div class="arms">
-            <label class="label" for="spirit">Kỹ năng (<span class="base-stat" id="gear-spirit">3</span>) </label>
-            <span id="spirit">3</span>
-            <span style="margin-right:0">
-                <span style="color:orange"> (+</span>
-                <select title="Enchant CPU" class="ent" id="ent-spirit">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <span style="color:orange">)</span>
-                </span>
-            <div class="btns">
-                <input type="text" value="0" id="amount__spirit" style="width:3rem;text-align:center">
-                <button style="padding-top:1px;" id="btn_plus_spirit">+</button>
-                <button disabled id="btn_minus_spirit">-</button>
-            </div>
-        </div>
-        <div class="arms">
-            <label class="label" for="eva">Né tránh (<span class="base-stat" id="gear-eva">1</span>) </label>
-            <span id="eva">1</span>
-            <span style="margin-right:0">
-                <span style="color:orange"> (+</span>
-                <select title="Enchant CPU" class="ent" id="ent-eva">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <span style="color:orange">)</span>
-                </span>
-            <div class="btns">
-                <input type="text" value="0" id="amount__eva" style="width:3rem;text-align:center">
-                <button style="padding-top:1px;" id="btn_plus_eva">+</button>
-                <button disabled id="btn_minus_eva">-</button>
-            </div>
-        </div>
-        <div class="arms">
-            <label class="label" for="shield">Giáp (<span class="base-stat" id="gear-shield">4</span>) </label>
-            <span id="shield">4</span>
-            <span style="margin-right:0">
-                <span style="color:orange"> (+</span>
-                <select title="Enchant CPU" class="ent" id="ent-shield">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <span style="color:orange">)</span>
-                </span>
-            <div class="btns">
-                <input type="text" value="0" id="amount__shield" style="width:3rem;text-align:center">
-                <button style="padding-top:1px;" id="btn_plus_shield">+</button>
-                <button disabled id="btn_minus_shield">-</button>
-            </div>
+        <div class="column">
+            <a href="/weapon.html">      
+                <div class="bang">       
+                    <div>BẢNG CHƠI ĐỒ</div>
+                    <div style="font-size: 1.5rem">Build Súng, Tên Lửa, Giáp</div>    
+                </div>              
+            </a>
         </div>
     </div>
-<br>
-    <div class="legs"> <!--Bảng thông số-->
-        <div class="toes">
-            <div class="card">
-                <header class="card-header">Tấn công</header>
-                <div class="card-content">
-                <dl>
-                    <dt>Chính xác</dt>
-                    <dd id="card_prob">0.19%</dd>
-                    <dt>Xuyên phá</dt>
-                    <dd id="card_pierce">1.97%</dd>
-                    <dt>Sát thương</dt>
-                    <dd id="card_atk">2.9575%</dd>
-                </dl>
-                </div>
-            </div> 
-        </div>
-        <div class="toes">
-            <div class="card">
-                <header class="card-header"v>Phòng thủ</header>
-                <div class="card-content">
-                <dl>
-                    <dt>Phòng ngự</dt>
-                    <dd id="card_def">1.63%</dd>
-                    <dt>Né tránh</dt>
-                    <dd id="card_eva">0.50%</dd>
-                    <dt>Giáp</dt>
-                    <dd id="card_shield">120</dd>
-                </dl>
-                </div>
-            </div>
-        </div>
-        
-        <div class="toes">
-            <div class="card">
-                <header class="card-header">Chỉ số khác</header>
-                <div class="card-content">
-                <dl>
-                    <dt>Kỹ năng</dt>
-                    <dd id="card_spirit">24</dd>
-                    <dt>Nhiên liệu</dt>
-                    <dd id="card_fuel">30</dd>
-                    <dt>Tải trọng</dt>
-                    <dd id="card_weight">480</dd>
-                </dl>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr style="border: 0.5px solid #c8d6e5;background-color:#c8d6e5"/>
 </div>
-
-<footer role="contentinfo" class="footer">
-    <div class="container">
-        <span>Made with help from good people</span>
-        <span style="float:right;color:powderblue;">AGE12</span>
-        <div>Thank you, Dr.Delay and Team vi0lation</div>
-    </div>
-</footer>
-<p id="demo" type="text">DEMO</p>
-
-<script type="text/javascript">     /*is-select cho html hiện tại*/
-    const currentLocation = location.href;
-    const menuItem = document.querySelectorAll('.menuItem');
-    const menuLength = menuItem.length;
-    for (let i = 0; i < menuLength; i++) {
-        if (menuItem[i].href === currentLocation) {
-            menuItem[i].className += " is-selected"
-        }
-        else menuItem[i].className -= " is-selected"
-    }
-</script>
-
-<script type="module" src="./js/stat.js"></script>
-<script type="module" src="./js/values.js"></script>
-<script type="module" src="./js/main.js"></script>
 </body>
 </html>

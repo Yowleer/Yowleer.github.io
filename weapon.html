@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamACE.VN WeaponCalc</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="./css/weapon.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+</head>
+<body>
+
+    <header role="banner" class="banner">
+            <div class="container of-header" style="color:white">
+                <ul style="margin-left:-16px;">
+                    <li><a href="/index.html" class="brand">DAvN</a>
+                    <li><a href="/stat.html" class="menuItem">BẢNG SET ĐIỂM</a></li>
+                    <li><a href="/weapon.html" class="menuItem">BẢNG CHƠI ĐỒ</a></li>
+                </ul>
+            </div>
+    </header>
+<div class="container">
+
+    <h1 title="Game KHÔNG Chiến Số 1 Việt Nam">For Dreamers</h1>
+    <h2>Loading ⚫⚪⚪⚪⚪</h2>
+
+    <div class="head"> <!--4 gear, điểm, CPU, điểm dư-->
+        <div class="eyes" id="selGear">
+           <ul>
+               <li class="gearSel">I-Gear</li>
+               <li class="gearSel">M-Gear</li>
+               <li class="gearSel">B-Gear</li>
+               <li class="gearSel active">A-Gear</li>
+           </ul>
+        </div>
+    <hr style="border: 0.5px solid #c8d6e5;background-color:#c8d6e5"/>
+    </div> 
+
+    <label class="label">Trang bị</label>
+    <div class="columns">
+        <div class="column">
+            <label class="label" for="vkcb"> Vũ khí cơ bản </label>
+            <div class="select is-fullwidth">
+                <select name="vkcb" id="vkcb">
+                    <option value="">-</option>
+                    <option value="111">Red Crytal Big Smash v2</option>
+                    <option value="112">Katharsis of Bishop</option>
+                    <option value="113">Zelus Navy Ver. Final</option>
+                </select>
+            </div>
+            <div class="columns">
+                <div class="column" style="padding: 0.75rem 0.25rem 0.75rem 0">
+                <label class="label" for="vkcb-dau"> Chỉ số đầu </label>
+                <div class="select is-fullwidth">
+                    <select name="vkcb-dau" id="vkcb-dau">
+                        <option value="">-</option>
+                        <option value="P11">Warrior</option>
+                        <option value="P12">Max</option>
+                        <option value="P13">Legend</option>
+                        <option value="P14">Monkey</option>
+                    </select>
+                </div>    
+                </div>
+                <div class="column"  style="padding: 0.75rem 0 0.75rem 0.25rem">
+                <label class="label" for="vkcb-duoi"> Chỉ số đuôi </label>
+                <div class="select is-fullwidth">
+                    <select name="vkcb-duoi" id="vkcb-duoi">     
+                        <option value="">-</option>                   
+                        <option value="S11">of Warrior</option>
+                        <option value="S12">of Max</option>
+                        <option value="S13">of Legend</option>
+                        <option value="S14">of Monkey</option>
+                    </select>
+                </div>       
+            </div>
+            </div>
+            <label class="label" for="vkcb-ench"> Enchant VKCB </label>
+            <div class="select is-fullwidth">
+                <select name="vkcb-ench" id="vkcb-ench">
+                    <option value="">Chọn thẻ enchant</option>
+                    <option value="e11">Thẻ bắn nhanh CB</option>
+                    <option value="e12">Thẻ bắn nhanh CB đặc biệt</option>
+                    <option value="e13">Thẻ chính xác CB</option>
+                    <option value="e14">Thẻ chính xác CB đặc biệt</option>
+                    <option value="e15">Thẻ xuyên phá CB</option>
+                    <option value="e16">Thẻ xuyên phá CB đặc biệt</option>
+                    <option value="e17">Thẻ tấn công CB</option>
+                    <option value="e18">Thẻ tấn công CB đặc biệt</option>
+                    <option value="e19">Thẻ cự ly CB</option>
+                    <option value="e110">Thẻ làm nhẹ CB</option>
+                    </select>
+                  
+                  <div class="div-ench invi nhom-vkcb" id="e11">
+                    <input type="number" min="0" max="17" value="0" class="vkcb_input input0Del" id="e11_input">
+                    <span>Thẻ bắn nhanh CB</span>
+                  </div>
+                  <div class="div-ench invi nhom-vkcb" id="e12">
+                    <input type="number" min="0" max="17" value="0" class="vkcb_input  input0Del" id="e12_input">
+                    <span>Thẻ bắn nhanh CB đặc biệt</span>
+                  </div>
+                  <div class="div-ench invi nhom-vkcb" id="e13">
+                    <input type="number" min="0" max="17" value="0" class="vkcb_input  input0Del" id="e13_input">
+                    <span>Thẻ chính xác CB</span>
+                  </div>
+                  <div class="div-ench invi nhom-vkcb" id="e14">
+                    <input type="number" min="0" max="17" value="0" class="vkcb_input  input0Del" id="e14_input">
+                    <span>Thẻ chính xác CB đặc biệt</span>
+                  </div>
+                  <div class="div-ench invi nhom-vkcb" id="e15">
+                    <input type="number" min="0" max="17" value="0" class="vkcb_input  input0Del" id="e15_input">
+                    <span>Thẻ xuyên phá CB</span>
+                  </div>
+                  <div class="div-ench invi nhom-vkcb" id="e16">
+                    <input type="number" min="0" max="17" value="0" class="vkcb_input  input0Del" id="e16_input">
+                    <span>Thẻ xuyên phá CB đặc biệt</span>
+                  </div>
+                  <div class="div-ench invi nhom-vkcb" id="e17">
+                    <input type="number" min="0" max="17" value="0" class="vkcb_input  input0Del" id="e17_input">
+                    <span>Thẻ tấn công CB</span>
+                  </div>
+                  <div class="div-ench invi nhom-vkcb" id="e18">
+                    <input type="number" min="0" max="17" value="0" class="vkcb_input  input0Del" id="e18_input">
+                    <span>Thẻ tấn công CB đặc biệt</span>
+                  </div>
+                  <div class="div-ench invi nhom-vkcb" id="e19">
+                    <input type="number" min="0" max="17" value="0" class="vkcb_input  input0Del" id="e19_input">
+                    <span>Thẻ cự ly CB</span>
+                  </div>
+                  <div class="div-ench invi nhom-vkcb" id="e110">
+                    <input type="number" min="0" max="17" value="0" class="vkcb_input  input0Del" id="e110_input">
+                    <span>Thẻ làm nhẹ CB</span>
+                  </div>
+                
+            </div>
+        </div>
+        <div class="column">
+            <label class="label" for="vkcc"> Vũ khí cao cấp </label>
+            <div class="select is-fullwidth">
+                <select name="vkcc" id="vkcc">
+                    <option value="">-</option>
+                    <option value="121">Blue Crystal Terol</option>
+                    <option value="122">Blue Crystal Terol v2</option>
+                    <option value="123">Tên lửa 8-3 (A)</option>
+                    <option value="124">Superior Inferno</option>
+                </select>
+            </div>
+            <div class="columns">
+                <div class="column" style="padding: 0.75rem 0.25rem 0.75rem 0">
+                <label class="label" for="vkcc-dau"> Chỉ số đầu </label>
+                <div class="select is-fullwidth">
+                    <select name="vkcc-dau" id="vkcc-dau">
+                        <option value="">-</option>
+                        <option value="P11">Warrior</option>
+                        <option value="P12">Max</option>
+                        <option value="P13">Legend</option>
+                        <option value="P14">Monkey</option>
+                    </select>
+                </div>    
+                </div>
+                <div class="column"  style="padding: 0.75rem 0 0.75rem 0.25rem">
+                <label class="label" for="vkcc-duoi"> Chỉ số đuôi </label>
+                <div class="select is-fullwidth">
+                    <select name="vkcc-duoi" id="vkcc-duoi">
+                        <option value="">-</option>                   
+                        <option value="S11">of Warrior</option>
+                        <option value="S12">of Max</option>
+                        <option value="S13">of Legend</option>
+                        <option value="S14">of Monkey</option>
+                    </select>
+                </div>       
+            </div>
+            </div>
+            <label class="label" for="vkcc-ench"> Enchant VKCC </label>
+            <div class="select is-fullwidth">
+                <select name="vkcc-ench" id="vkcc-ench">
+                    <option value="">Chọn thẻ enchant</option>
+                    <option value="e21">Thẻ bắn nhanh CC</option>
+                    <option value="e22">Thẻ bắn nhanh CC đặc biệt</option>
+                    <option value="e23">Thẻ chính xác CC</option>
+                    <option value="e24">Thẻ chính xác CC đặc biệt</option>
+                    <option value="e25">Thẻ xuyên phá CC</option>
+                    <option value="e26">Thẻ xuyên phá CC đặc biệt</option>
+                    <option value="e27">Thẻ tấn công CC</option>
+                    <option value="e28">Thẻ tấn công CC đặc biệt</option>
+                    <option value="e29">Thẻ cự ly CC</option>
+                    <option value="e210">Thẻ làm nhẹ CC</option>
+                    <option value="e211">Thẻ tăng phạm vi nổ</option>
+                    <option value="e212">Thẻ tốc độ</option>
+                </select>
+                  
+                  <div class="div-ench invi nhom-vkcc" id="e21">
+                    <input type="number" min="0" max="17" value="0" class="vkcc_input  input0Del" id="e21_input">
+                    <span>Thẻ bắn nhanh CC</span>
+                  </div>
+                  <div class="div-ench invi nhom-vkcc" id="e22">
+                    <input type="number" min="0" max="17" value="0" class="vkcc_input  input0Del" id="e22_input">
+                    <span>Thẻ bắn nhanh CC đặc biệt</span>
+                  </div>
+                  <div class="div-ench invi nhom-vkcc" id="e23">
+                    <input type="number" min="0" max="17" value="0" class="vkcc_input  input0Del" id="e23_input">
+                    <span>Thẻ chính xác CC</span>
+                  </div>
+                  <div class="div-ench invi nhom-vkcc" id="e24">
+                    <input type="number" min="0" max="17" value="0" class="vkcc_input  input0Del" id="e24_input">
+                    <span>Thẻ chính xác CC đặc biệt</span>
+                  </div>
+                  <div class="div-ench invi nhom-vkcc" id="e25">
+                    <input type="number" min="0" max="17" value="0" class="vkcc_input  input0Del" id="e25_input">
+                    <span>Thẻ xuyên phá CC</span>
+                  </div>
+                  <div class="div-ench invi nhom-vkcc" id="e26">
+                    <input type="number" min="0" max="17" value="0" class="vkcc_input  input0Del" id="e26_input">
+                    <span>Thẻ xuyên phá CC đặc biệt</span>
+                  </div>
+                  <div class="div-ench invi nhom-vkcc" id="e27">
+                    <input type="number" min="0" max="17" value="0" class="vkcc_input  input0Del" id="e27_input">
+                    <span>Thẻ tấn công CC</span>
+                  </div>
+                  <div class="div-ench invi nhom-vkcc" id="e28">
+                    <input type="number" min="0" max="17" value="0" class="vkcc_input  input0Del" id="e28_input">
+                    <span>Thẻ tấn công CC đặc biệt</span>
+                  </div>
+                  <div class="div-ench invi nhom-vkcc" id="e29">
+                    <input type="number" min="0" max="17" value="0" class="vkcc_input  input0Del" id="e29_input">
+                    <span>Thẻ cự ly CC</span>
+                  </div>
+                  <div class="div-ench invi nhom-vkcc" id="e210">
+                    <input type="number" min="0" max="17" value="0" class="vkcc_input  input0Del" id="e210_input">
+                    <span>Thẻ làm nhẹ CC</span>
+                  </div>
+                  <div class="div-ench invi nhom-vkcc" id="e211">
+                    <input type="number" min="0" max="17" value="0" class="vkcc_input  input0Del" id="e211_input">
+                    <span>Thẻ tăng phạm vi nổ</span>
+                  </div>
+                  <div class="div-ench invi nhom-vkcc" id="e212">
+                    <input type="number" min="0" max="17" value="0" class="vkcc_input  input0Del" id="e212_input">
+                    <span>Thẻ tốc độ</span>
+                  </div>
+            </div>
+        </div>
+        <div class="column">
+            <label class="label" for="giap"> Giáp </label>
+            <div class="select is-fullwidth">
+                <select name="giap" id="giap">
+                    <option value="">-</option>
+                    <option value="131">Halloween Guarder .5 (XP)</option>
+                    <option value="132">Halloween Guarder .5 (CX)</option>
+                    <option value="133">U23-VN 2018 [AG] R</option>
+                    <option value="134">NGC Guarder</option>
+                </select>
+            </div>
+            <div class="columns">
+                <div class="column" style="padding: 0.75rem 0.25rem 0.75rem 0">
+                <label class="label" for="giap-dau"> Chỉ số đầu </label>
+                <div class="select is-fullwidth">
+                    <select name="giap-dau" id="giap-dau">
+                        <option value="">-</option>
+                        <option value="P31">Person</option>
+                        <option value="P32">Pariah</option>
+                        <option value="P33">Phantasm</option>
+                        <option value="P34">Pinnacle</option>
+                    </select>
+                </div>    
+                </div>
+                <div class="column"  style="padding: 0.75rem 0 0.75rem 0.25rem">
+                <label class="label" for="giap-duoi"> Chỉ số đuôi </label>
+                <div class="select is-fullwidth">
+                    <select name="giap-duoi" id="giap-duoi">      
+                        <option value="">-</option>                  
+                        <option value="S31">of Person</option>
+                        <option value="S32">of Pariah</option>
+                        <option value="S33">of Phantasm</option>
+                        <option value="S34">of Pinnacle</option>
+                    </select>
+                </div>       
+            </div>
+            </div>
+            <label class="label" for="giap-ench"> Enchant Giáp </label>
+            <div class="select is-fullwidth">
+                <select name="giap-ench" id="giap-ench">                    
+                    <option value="">Chọn thẻ enchant</option>
+                    <option value="e31">Thẻ nâng cấp phòng ngự giáp</option>
+                    <option value="e32">Thẻ nâng cấp phòng ngự giáp ĐB</option>
+                    <option value="e33">Thẻ nâng cấp né tránh giáp</option>
+                    <option value="e34">Thẻ nâng cấp né tránh giáp ĐB</option>
+                    <option value="e35">Thẻ nâng cấp phi cơ</option>
+                    <option value="e36">Thẻ nâng cấp phi cơ ĐB</option>
+                    <option value="e37">Thẻ năng lượng</option>
+                    <option value="e38">Thẻ nâng cấp năng lượng ĐB</option>
+                    <option value="e39">Thẻ giáp cho Gear</option>
+                    <option value="e310">Thẻ nâng cấp giáp ĐB</option>
+                </select>                      
+                      <div class="div-ench invi nhom-giap" id="e31">
+                        <input type="number" min="0" max="17" value="0" class="giap_input  input0Del" id="e31_input">
+                        <span>Thẻ nâng cấp phòng ngự giáp</span>
+                      </div>
+                      <div class="div-ench invi nhom-giap" id="e32">
+                        <input type="number" min="0" max="17" value="0" class="giap_input  input0Del" id="e32_input">
+                        <span>Thẻ nâng cấp phòng ngự giáp ĐB</span>
+                      </div>
+                      <div class="div-ench invi nhom-giap" id="e33">
+                        <input type="number" min="0" max="17" value="0" class="giap_input  input0Del" id="e33_input">
+                        <span>Thẻ nâng cấp né tránh giáp</span>
+                      </div>
+                      <div class="div-ench invi nhom-giap" id="e34">
+                        <input type="number" min="0" max="17" value="0" class="giap_input  input0Del" id="e34_input">
+                        <span>Thẻ nâng cấp né tránh giáp ĐB</span>
+                      </div>
+                      <div class="div-ench invi nhom-giap" id="e35">
+                        <input type="number" min="0" max="17" value="0" class="giap_input  input0Del" id="e35_input">
+                        <span>Thẻ nâng cấp phi cơ</span>
+                      </div>
+                      <div class="div-ench invi nhom-giap" id="e36">
+                        <input type="number" min="0" max="17" value="0" class="giap_input  input0Del" id="e36_input">
+                        <span>Thẻ nâng cấp phi cơ ĐB</span>
+                      </div>
+                      <div class="div-ench invi nhom-giap" id="e37">
+                        <input type="number" min="0" max="17" value="0" class="giap_input  input0Del" id="e37_input">
+                        <span>Thẻ năng lượng</span>
+                      </div>
+                      <div class="div-ench invi nhom-giap" id="e38">
+                        <input type="number" min="0" max="17" value="0" class="giap_input  input0Del" id="e38_input">
+                        <span>Thẻ nâng cấp năng lượng ĐB</span>
+                      </div>
+                      <div class="div-ench invi nhom-giap" id="e39">
+                        <input type="number" min="0" max="17" value="0" class="giap_input  input0Del" id="e39_input">
+                        <span>Thẻ giáp cho Gear</span>
+                      </div>
+                      <div class="div-ench invi nhom-giap" id="e310">
+                        <input type="number" min="0" max="17" value="0" class="giap_input  input0Del" id="e310_input">
+                        <span>Thẻ nâng cấp giáp ĐB</span>
+                      </div>                     
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column">
+            <label class="label">P.E.T</label>
+            <div class="select is-fullwidth">
+                <select name="pet" id="pet">
+                    <option value="">-</option>
+                    <option value="pet1">[P.E.T] Megakeeper</option>
+                    <option value="pet2">[Partner] Bifrons Beta V4</option>
+                    <option value="pet3">[Partner] Bifrons Beta Final</option>
+                    <option value="pet4">[PET] Phoenix</option>
+                </select>
+            </div>
+        </div>
+        <div class="column">
+            <label class="label">Cờ</label>
+            <div class="select is-fullwidth">
+                <select name="co" id="co">
+                    <option value="">-</option>
+                    <option value="co1">Hổ may mắn</option>
+                    <option value="co2">Hổ rừng</option>
+                    <option value="co3">Hổ thần</option>
+                    <option value="co4">Bạch hổ</option>
+                </select>
+            </div>
+        </div>
+        <div class="column">
+            <label class="label">Quân Hàm</label>
+            <input type="number" class="input" id="qh" min="0" max="24" value="0">
+        </div>
+    </div>
+    <label class="label" title="Chỉ số từ level súng, CSHH, .v.v..">Chỉ số bổ sung</label>
+    <div class="columns">
+        <div class="column">            
+            <div class="select is-fullwidth">
+                <select name="cshh" id="cshh_CB">
+                    <option value="">Thêm chỉ số tấn công CB (%)</option>
+                    <option value="cshh11">CB_MIN</option>
+                    <option value="cshh12">CB_MAX</option>
+                    <option value="cshh13">CB_CX</option>
+                    <option value="cshh14">CB_XP</option>                    
+                </select>
+                <div class="div-ench invi" id="cshh11">
+                    <input type="number" min="0" max="100" value="0" class="input0Del" id="cshh11_input">
+                    <span>CB_MIN</span>
+                </div>
+                <div class="div-ench invi" id="cshh12">
+                    <input type="number" min="0" max="100" value="0" class="input0Del" id="cshh12_input">
+                    <span>CB_MAX</span>
+                </div>
+                <div class="div-ench invi" id="cshh13">
+                    <input type="number" min="0" max="100" value="0" class="input0Del" id="cshh13_input">
+                    <span>CB_CX</span>
+                </div>
+                <div class="div-ench invi" id="cshh14">
+                    <input type="number" min="0" max="100" value="0" class="input0Del" id="cshh14_input">
+                    <span>CB_XP</span>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="select is-fullwidth">
+                <select name="cshh" id="cshh_CC">
+                    <option value="">Thêm chỉ số tấn công CC (%)</option>
+                    <option value="cshh21">CC_MIN</option>
+                    <option value="cshh22">CC_MAX</option>
+                    <option value="cshh23">CC_CX</option> 
+                    <option value="cshh24">CC_XP</option>                
+                </select>
+                <div class="div-ench invi" id="cshh21">
+                    <input type="number" min="0" max="100" value="0" class="input0Del" id="cshh21_input">
+                    <span>CC_MIN</span>
+                </div>
+                <div class="div-ench invi" id="cshh22">
+                    <input type="number" min="0" max="100" value="0" class="input0Del" id="cshh22_input">
+                    <span>CC_MAX</span>
+                </div>
+                <div class="div-ench invi" id="cshh23">
+                    <input type="number" min="0" max="100" value="0" class="input0Del" id="cshh23_input">
+                    <span>CC_CX</span>
+                </div>
+                <div class="div-ench invi" id="cshh24">
+                    <input type="number" min="0" max="100" value="0" class="input0Del" id="cshh24_input">
+                    <span>CC_XP</span>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="select is-fullwidth">
+                <select name="cshh" id="cshh_GI">
+                    <option value="">Thêm chỉ số sống sót</option>
+                    <option value="cshh31">Thủ_CB</option>
+                    <option value="cshh32">Né_CB</option>
+                    <option value="cshh33">Thủ_CC</option>
+                    <option value="cshh34">Né_CC</option>
+                    <option value="cshh35">HP</option>
+                    <option value="cshh36">DP</option>
+                </select>
+                <div class="div-ench invi" id="cshh31">
+                    <input type="number" min="0" max="100" value="0" class="input0Del" id="cshh31_input">
+                    <span>Thủ_CB</span>
+                </div>
+                <div class="div-ench invi" id="cshh32">
+                    <input type="number" min="0" max="100" value="0" class="input0Del" id="cshh32_input">
+                    <span>Né_CB</span>
+                </div>
+                <div class="div-ench invi" id="cshh33">
+                    <input type="number" min="0" max="100" value="0" class="input0Del" id="cshh33_input">
+                    <span>Thủ_CC</span>
+                </div>
+                <div class="div-ench invi" id="cshh34">
+                    <input type="number" min="0" max="100" value="0" class="input0Del" id="cshh34_input">
+                    <span>Né_CC</span>
+                </div>
+                <div class="div-ench invi" id="cshh35">
+                    <input type="number" min="0" max="100" value="0" class="input0Del" id="cshh35_input">
+                    <span>HP</span>
+                </div>
+                <div class="div-ench invi" id="cshh36">
+                    <input type="number" min="0" max="100" value="0" class="input0Del" id="cshh36_input">
+                    <span>DP</span>
+                </div>            
+            </div>
+        </div>
+    </div>
+    <div class="">*preview đồ*</div>
+    <div class="columns">
+        <div class="column">
+            <div class="card">
+                <header class="card-header">
+                    <div class="label">
+                        <span style="color:green">prefix</span>
+                        <span style="color:blue">item</span>
+                        <span style="color:green">suffix</span>
+                        <span style="color:orange">enchant</span>                    
+                    </div>
+                </header>            
+                <div class="card-content">
+                    <ul>
+                        <li>CB_MIN:</li>
+                        <li>CB_MAX:</li>
+                        <li>CB_CX:</li>
+                        <li>CB_XP:</li>
+                        <li>CB_Cự-ly:</li>
+                        <li>CB_ReA:</li>
+                        <li>CB_Quá-tải:</li>                    
+                        <li>CB_SHOTS:</li>
+                        <li>CB_MULTI:</li>
+                        <li>CB_Trọng-lượng:</li>
+                    </ul>            
+                </div>
+            </div>           
+        </div>
+        <div class="column">
+            <div class="card">
+                <header class="card-header">
+                    <div class="label">
+                        <span style="color:green">prefix</span>
+                        <span style="color:blue">item</span>
+                        <span style="color:green">suffix</span>
+                        <span style="color:orange">enchant</span>                    
+                    </div>
+                </header>
+                <div class="card-content">
+                    <ul>
+                        <li>CC_MIN</li>
+                        <li>CC_MAX</li>
+                        <li>CC_CX</li>
+                        <li>CC_XP</li>
+                        <li>CC_Tốc-độ</li>
+                        <li>CC_ReA</li>                                   
+                        <li>CC_BKN</li>         
+                        <li>CC_SHOTS</li>
+                        <li>CC_MULTI</li>
+                        <li>CC_Trọng-lượng</li>
+                        <li>CC_Góc-bắn</li>   
+                        <li>CC_Góc-lượn</li>
+                        <li>CC_Cự-ly</li>
+                    </ul>            
+                </div>
+            </div>            
+        </div>
+        <div class="column">
+            <div class="card">
+                <header class="card-header">
+                    <span style="color:green">prefix</span>
+                            <span style="color:blue">item</span>
+                            <span style="color:green">suffix</span>
+                            <span style="color:orange">enchant</span>
+                </header>
+                <div class="card-content">
+                    <ul>
+                        <li>HP:</li>
+                        <li>DP:</li>
+                        <li>Thủ_CB:</li>
+                        <li>Thủ_CC:</li>
+                        <li>Né_CB:</li>
+                        <li>Né_CC:</li>
+                        <li>CB_MIN:</li>
+                        <li>CB_MAX:</li>
+                        <li>CC_MIN:</li>
+                        <li>CC_MAX</li>
+                        <li>CB_XP:</li>
+                        <li>CC_XP:</li>
+                        <li>Cự ly hữu hiệu VKCB:</li>
+                        <li>Cự ly hữu hiệu VKCC:</li>
+                        <li>G_Trọng-lượng:</li>
+                    </ul>            
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <hr style="border: 0.5px solid #c8d6e5;background-color:#c8d6e5"/>
+
+    <label class="label">Bảng Set Điểm</label>
+    <div class="columns">
+        <div class="column">
+            <label class="label" for="statAtk">Tấn Công</label>
+            <input type="number" class="input" id="statAtk" min="0" max="352" value="0">
+        </div>
+        <div class="column">
+            <label class="label" for="statDef">Phòng Ngự</label>
+            <input type="number" class="input" id="statDef" min="0" max="352" value="0">
+        </div>
+        <div class="column">
+            <label class="label" for="statEva">Né Tránh</label>
+            <input type="number" class="input" id="statEva" min="0" max="352" value="0">
+        </div>
+        <div class="column">
+            <label class="label" for="statShield">Giáp</label>
+            <input type="number" class="input" id="statShield" min="0" max="352" value="0">
+        </div>
+    </div>
+
+    <label class="label">Kỹ năng và Vật phẩm tiêu hao</label>
+    <div class="tags">
+        <span class="tag MG" style="cursor: pointer;">Tăng Cường Công Kích</span>
+        <span class="tag MG" style="cursor: pointer;">Tăng Cường Phòng Thủ</span>
+        <span class="tag MG" style="cursor: pointer;">Tăng Cường Né Tránh</span>
+        <span class="tag ALL" style="cursor: pointer;">Tập Trung</span>
+        <span class="tag ALL" style="cursor: pointer;">Phòng Ngự</span>
+        <span class="tag ALL" style="cursor: pointer;">Tránh Né</span>
+        <span class="tag ALL" style="cursor: pointer;">Tăng cường VKCB</span>
+        <span class="tag ALL" style="cursor: pointer;">Tăng cường VKCC</span>
+        <span style="display:flex;" id="ccPickOne">
+            <span class="tag ALL tagPO" style="cursor: pointer;" title="Căn cứ xịn">Căn cứ 👌</span>  
+            <span class="tag ALL tagPO" style="cursor: pointer;" title="Căn cứ xịn hơn">Căn cứ 👌👌</span>
+        </span>
+        <span style="display:flex;" id="agPickOne">
+            <span class="tag AG tagPO" style="cursor: pointer;">Tấn Công Toàn Diện</span>  
+            <span class="tag AG tagPO" style="cursor: pointer;">Phòng Thủ Toàn Diện</span>  
+            <span class="tag AG tagPO" style="cursor: pointer;">Tấn Công Trên Không</span>
+        </span>
+    </div>
+    <div class="tags" style="justify-content: center;">
+        <span class="tag AG Hyper" style="cursor: pointer;" title="NL PvP xài Bất Tử">HYPER SHOT</span>
+    </div>
+    <div class="tags" style="justify-content: flex-end;">
+        <span class="tag LC ALL" style="cursor: pointer;">Lời Chúc Quốc Gia</span>
+        <span class="tag LC ALL" style="cursor: pointer;">Lời Chúc 5/10</span>
+        <span class="tag LC ALL" style="cursor: pointer;">Lời Chúc 20/20</span>
+        <span style="display:flex;" id="ga1PickOne">
+            <span class="tag ALL tagPO" style="cursor: pointer;">Gà tây nướng</span>  
+            <span class="tag ALL tagPO" style="cursor: pointer;">Gà tây nướng (1H)</span>
+        </span>
+        <span style="display:flex;" id="ga2PickOne">
+            <span class="tag ALL tagPO" style="cursor: pointer;">Gà tây quay</span>  
+            <span class="tag ALL tagPO" style="cursor: pointer;">Gà tây quay (1H)</span>
+        </span>
+        <span style="display:flex;" id="ga3PickOne">
+            <span class="tag ALL tagPO" style="cursor: pointer;">Gà tây bỏ lò</span>  
+            <span class="tag ALL tagPO" style="cursor: pointer;">Gà tây bỏ lò (1H)</span>
+        </span>
+        <span style="display:flex;" id="guomPickOne">
+            <span class="tag ALL tagPO" style="cursor: pointer;">Lưỡi gươm quyền năng Mk-I</span>  
+            <span class="tag ALL tagPO" style="cursor: pointer;">Lưỡi gươm quyền năng Mk-I (1H)</span>
+        </span>
+        <span style="display:flex;" id="virusPickOne">
+            <span class="tag ALL tagPO" style="cursor: pointer;">Virus tăng trưởng cấp I</span>  
+            <span class="tag ALL tagPO" style="cursor: pointer;">Virus tăng trưởng cấp I (1H)</span>
+        </span>
+        <span style="display:flex;" id="holoPickOne">
+            <span class="tag ALL tagPO" style="cursor: pointer;">[Thẻ biến hình] pQQr</span>  
+            <span class="tag ALL tagPO" style="cursor: pointer;">[Thẻ biến hình] Tin Bat 😎</span>
+        </span>
+    </div>
+    <label class="label">Bùa</label>
+    <div class="columns">
+        <div class="column">
+            
+            <div class="select is-fullwidth">
+                <select name="bua" id="bua">
+                    <option value="">-</option>
+                    <option value="bua1">Hax Charm</option>
+                    <option value="bua2">Thương quyền năng & Bùa (Phòng ngự)</option>
+                    <option value="bua3">Lăng kính & Bùa (Phòng ngự)</option>
+                    <option value="bua4">Safeguard Def. Charm of the Gods (5H)</option>
+                    <option value="bua5">Mũi thương & Lăng kính quyền năng</option>
+                    <option value="bua6">Thương quyền năng & Bùa (Né tránh)</option>                    
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <hr style="border: 0.5px solid #c8d6e5;background-color:#c8d6e5"/>
+    
+    <div class="columns">
+        <div class="column">*stat cuối vkcb*
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+        <div class="column">*stat cuối vkcc*
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+        <div class="column">*stat cuối giáp*
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    <label class="label" title="Chỉ số của con quái thú làm bạn gung xợ">Số liệu thống kê về kẻ thù</label>
+    <div class="columns">
+        <div class="column">
+            <label for="" class="label">Thủ_CB</label>
+            <input type="number" class="input" id="enemyDef" step="0.01" value="0">
+        </div>
+        <div class="column">
+            <label for="" class="label">Thủ_CC</label>
+            <input type="number" class="input" id="enemyDef" step="0.01" value="0">
+        </div>
+        <div class="column">
+            <label for="" class="label">Né_CB</label>
+            <input type="number" class="input" id="enemyEva" step="0.01" value="0">
+        </div>
+        <div class="column">
+            <label for="" class="label">Né_CC</label>
+            <input type="number" class="input" id="enemyEva" step="0.01" value="0">
+        </div>
+        <!--<div class="column">
+            <label for="" class="label">HP</label>
+            <input type="number" class="input" id="enemyHP" step="0.01" value="0">
+        </div>
+        <div class="column">
+            <label for="" class="label">DP</label>
+            <input type="number" class="input" id="enemyDP" step="0.01" value="0">
+        </div>-->
+    </div>
+
+    <div class="columns">
+        <div class="column">*bắn địch vkcb*
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+        <div class="column">*bắn địch vkcc*
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+        <!--<div class="column">*địch bắn?*
+            <ul>
+                <li>tổng KG</li>
+                <li></li>
+            </ul>
+        </div>-->
+    </div>
+
+
+    <hr style="border: 0.5px solid #c8d6e5;background-color:#c8d6e5"/>
+</div>
+
+<footer role="contentinfo" class="footer">
+    <div class="container">
+        <span>Made with help from good people</span>
+        <span style="float:right;color:powderblue;">AGE12</span>
+        <div>Thank you, Dr.Delay and Team vi0lation</div>
+    </div>
+</footer>
+<p id="demo" class="test" type="text">DEMO</p>
+
+<script type="text/javascript">     /*is-select cho html hiện tại*/
+    const currentLocation = location.href;
+    const menuItem = document.querySelectorAll('.menuItem');
+    const menuLength = menuItem.length;
+    for (let i = 0; i < menuLength; i++) {
+        if (menuItem[i].href === currentLocation) {
+            menuItem[i].className += " is-selected"
+        }
+        else menuItem[i].className -= " is-selected"
+    }
+</script>
+
+<script type="module" src="./js/weapon.js"></script>
+</body>
+</html>

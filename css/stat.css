@@ -1,0 +1,214 @@
+html {
+    
+    background-repeat: no-repeat;
+    background-position: 100% 7%;
+    background-size:15%;
+
+}
+.banner {
+    background-color: dodgerblue;
+}
+.container {
+   max-width:1100px;
+   width:1100px;
+   margin:auto; 
+}
+.container.of-header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+}
+.container.of-header li {
+    float:left;
+}
+.container.of-header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+    padding: 16px;
+    text-decoration: none;
+}
+.container.of-header li a:hover {
+    background-color: deepskyblue;
+    /*rgb(62, 146, 146);*/
+}
+.container.of-header .is-selected {
+    background-color:deepskyblue;
+}
+h1 {
+    color:deeppink;
+}
+h2 {
+    color:dodgerblue;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* HEAD */
+/* .eyes */
+.eyes {
+    margin-bottom: 24px;
+}
+.eyes ul {
+    display:flex;
+    flex-direction:row;
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    align-items: center;
+}
+.eyes li {
+    flex-basis: 25%;
+    text-align:center;
+    line-height: 2.3rem;
+    font-weight:500;
+    border: 1px solid lightgrey;
+    margin:-1px 0 0 -1px;
+    font-size:1.4rem;
+}
+.eyes li:hover {
+    background-color: rgba(182, 182, 182, 0.1);
+    cursor: pointer;
+    color:black;
+}
+li.active:hover {
+    background-color:deepskyblue;
+    
+    color:white;
+}
+.gearSel.active {
+    background-color:deepskyblue;
+    font-weight:800;
+    color:white;
+    border-color:deepskyblue;
+}
+.eyes .gearSel {
+    padding-bottom: 2px;
+}
+/* .lower-face */
+.lower-face {
+    display:flex;
+    margin:-12px;
+    margin-bottom:12px;
+}
+.lower-face .nose, .lower-face .ears {
+    flex-basis:50%;
+    padding:12px;
+}
+.lower-face .nose input, .lower-face .ears select {
+    width: 100%;
+    padding:12px;
+    border: 1px solid #c8d6e5;
+    margin-top:12px;
+    border-radius: 3px;
+    font-size: 1.3rem;
+}
+.lower-face .ears select:hover {
+    cursor: pointer;
+}
+.label {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+
+/* BODY */
+/* .body */
+.body {
+    display:flex;
+    flex-direction: row; 
+    flex-wrap:wrap;
+    margin:-12px;
+}
+.body .arms {
+    flex:50%;
+    padding:15px;
+    line-height:2rem;
+    font-size:1.5rem;
+    font-weight: 400;
+}
+.body .arms label {
+    display:block;
+    font-weight: 700;
+    font-size: 1.4rem;
+} 
+.body .arms .btns {
+    float:right;
+    display:flex;
+    border-radius: 3px;
+}
+.body .arms .btns button {
+    height:32px; width:32px;
+    background-color:dodgerblue;
+    color:white;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.body .arms .btns button:disabled {
+    background: rgba(30, 143, 255, 0.5);
+    color: white;
+    cursor: not-allowed;
+}
+.body .arms .btns button:hover:enabled {
+    background: rgb(65, 134, 225);
+}
+
+.body .arms .btns input {
+    height:32px; width:32px;
+    font-size:1.4rem;
+    padding:3px 0 0 0;
+}
+.body .arms .ent {
+    height:32px; width:48px;
+    font-size:1.4rem;
+    padding:0;
+    color: orange;
+    border: 1px solid orange;
+    text-align: center;
+}
+
+/* TOES */
+/* .legs */
+.legs {
+    display:flex;
+    flex-direction: row;
+    margin:-12px;
+    margin-bottom:24px;
+    font-size: 1.2rem;
+}
+.legs .toes {
+    flex-basis:100%;
+    padding: 12px;
+
+}
+.card {
+    box-shadow:0 0 0 1px #c8d6e5;
+}
+.card .card-header {
+    box-shadow:0 0 0 1px #c8d6e5;
+    padding:12px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    background-color:aliceblue;
+}
+.card .card-content {
+    padding:0 24px 24px 24px;
+    
+}
+
+hr {
+    display: block;
+    height: 2px;
+    margin: 1.5rem 0;
+}
+/* *** */
+.footer {
+    background-color:#f5f5f5;
+    font-size: 0.75rem;
+    padding: 2rem 0rem 3rem 0rem;
+}
