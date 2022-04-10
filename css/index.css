@@ -1,37 +1,45 @@
-html {
-    
+html {    
     background-repeat: no-repeat;
     background-position: 100% 7%;
     background-size:15%;
 
+    overflow-y: scroll;
+    min-width: 300px;
+
+}
+body {
+    margin: 0;
 }
 .banner {
     background-color: dodgerblue;
 }
 .container {
-   max-width:1100px;
-   width:1100px;
-   margin:auto; 
+    max-width:1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    width: auto;
 }
-.container.of-header ul {
-    list-style-type: none;
+.container.of-header {
+    display: flex;
+ }
+.brands {
+    display: flex;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background-color: transparent;
 }
-.container.of-header li {
-    float:left;
+.container.of-header div {
+    display: flex;
 }
-.container.of-header li a {
-    display: block;
+.container.of-header div a {
+    
     color: white;
     text-align: center;
     font-size: xx-large;
     padding: 16px;
     text-decoration: none;
 }
-.container.of-header li a:hover {
+.container.of-header div a:hover {
     background-color: deepskyblue;
     /*rgb(62, 146, 146);*/
 }
@@ -86,4 +94,11 @@ hr {
     background-color:#f5f5f5;
     font-size: 0.75rem;
     padding: 2rem 0rem 3rem 0rem;
+}
+@media only screen and (max-width: 768px) {
+    /* For Mobile: */
+    /*flex-direction: column;*/
+    .columns {
+        flex-direction: column;
+    }
 }

@@ -1,17 +1,23 @@
-html {
-    
+html {    
     background-repeat: no-repeat;
     background-position: 100% 7%;
     background-size:15%;
 
+    overflow-y: scroll;
+    min-width: 300px;
+
+}
+body {
+    margin: 0;
 }
 .banner {
     background-color: dodgerblue;
 }
 .container {
-   max-width:1100px;
-   width:1100px;
-   margin:auto; 
+    max-width:1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    width: auto;
 }
 .container.of-header ul {
     list-style-type: none;
@@ -63,12 +69,12 @@ h2 {
 }
 .eyes li {
     flex-basis: 25%;
-    text-align:center;
+    text-align: center;
     line-height: 2.3rem;
-    font-weight:500;
+    font-weight: 500;
     border: 1px solid lightgrey;
-    margin:-1px 0 0 -1px;
-    font-size:1.4rem;
+    margin: -1px 0 0 -1px;
+    font-size: 1.3rem;
 }
 .eyes li:hover {
     background-color: rgba(182, 182, 182, 0.1);
@@ -211,4 +217,12 @@ hr {
     background-color:#f5f5f5;
     font-size: 0.75rem;
     padding: 2rem 0rem 3rem 0rem;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For Mobile: */
+    /*flex-direction: column;*/
+    .lower-face, .body, .legs {
+        flex-direction: column;
+    }
 }
