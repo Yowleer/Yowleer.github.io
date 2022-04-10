@@ -224,5 +224,8 @@ hr {
     /*flex-direction: column;*/
     .lower-face, .body, .legs {
         flex-direction: column;
+    }    
+    .container.of-header li {
+        float: none;
     }
 }

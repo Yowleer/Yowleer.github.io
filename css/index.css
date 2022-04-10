@@ -19,27 +19,25 @@ body {
     padding: 0 1.5rem;
     width: auto;
 }
-.container.of-header {
-    display: flex;
- }
-.brands {
-    display: flex;
+.container.of-header ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
+    overflow: hidden;
     background-color: transparent;
 }
-.container.of-header div {
-    display: flex;
+.container.of-header li {
+    float:left;
 }
-.container.of-header div a {
-    
+.container.of-header li a {
+    display: block;
     color: white;
     text-align: center;
     font-size: xx-large;
     padding: 16px;
     text-decoration: none;
 }
-.container.of-header div a:hover {
+.container.of-header li a:hover {
     background-color: deepskyblue;
     /*rgb(62, 146, 146);*/
 }
@@ -100,5 +98,8 @@ hr {
     /*flex-direction: column;*/
     .columns {
         flex-direction: column;
+    }
+    .container.of-header li {
+        float: none;
     }
 }

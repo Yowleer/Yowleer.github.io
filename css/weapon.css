@@ -268,4 +268,7 @@ hr {
     .tag.Hyper.is-activated {
         font-size: 2.1rem;
     }
+    .container.of-header li {
+        float: none;
+    }
 }
