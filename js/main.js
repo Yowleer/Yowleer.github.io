@@ -248,6 +248,11 @@ document.querySelectorAll('.ent').forEach(item => {
   })
 })
 
+/* TOTAL STAT WILL UPDATE REMAIN STAT */
+let total_stat = document.getElementById("totalstat");
+total_stat.onchange = total_stat.onkeyup = function() {
+  update_remain();  // Cập nhật điểm còn lại
+}
 
 /* PLUS & MINUS __ ATK */
 var amount_atk = document.getElementById("amount__atk");  // Lấy số lượng điểm
